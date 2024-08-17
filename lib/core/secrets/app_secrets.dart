@@ -1,0 +1,4 @@
+class AppSecrets{
+  static const supabaseurl='https://serlwasstoqdgnaoxxad.supabase.co';
+  static const supabaseAnnonKey='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNlcmx3YXNzdG9xZGduYW94eGFkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjM4ODE2MjcsImV4cCI6MjAzOTQ1NzYyN30.bXOtmWLTCfVQl0G0Ub4A2tD5_x41rgDZ3SXnmqIJ4SE';
+}
