@@ -6,6 +6,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
  // ignore: unused_local_variable
+ WidgetsFlutterBinding.ensureInitialized();
  final supabase= await Supabase.initialize(url:AppSecrets.supabaseurl,  anonKey:AppSecrets.supabaseAnnonKey);
   runApp(const MyApp());
 }
