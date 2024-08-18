@@ -30,6 +30,5 @@ class AuthRepositoryImpl implements AuthRepository {
         return left(Failure(e.message));    
     }
 
-    throw UnimplementedError();
   }
 }
