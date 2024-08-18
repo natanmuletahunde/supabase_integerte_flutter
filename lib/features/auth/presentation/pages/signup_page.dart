@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: unnecessary_import
 import 'package:flutter/widgets.dart';
 import 'package:flutter_full_structure/core/theme/app_pallet.dart';
 import 'package:flutter_full_structure/features/auth/presentation/pages/login_page.dart';
@@ -71,6 +72,11 @@ class _SignUpPage extends State<SignUpPage> {
               const SizedBox(height: 20),
               const AuthGradientButton(
                 buttonText: 'sign up'
+                onPressed: (){
+                if(formKey.currentState!.validate()) {
+                  context,read<>()
+                } 
+                },
               ),
               const SizedBox(height: 15),
               GestureDetector(

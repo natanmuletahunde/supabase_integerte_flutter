@@ -6,7 +6,7 @@ import 'package:fpdart/src/either.dart';
 
 class AuthRepositoryImpl implements AuthRepository {
   final AuthRemoteDataSource remoteDataSource;
-  const AuthRepositoryImpl({required this.remoteDataSource});
+  const AuthRepositoryImpl(authRemoteDataSource, {required this.remoteDataSource});
 
   @override
   Future<Either<Failure, String>> loginwithEmailPassword(

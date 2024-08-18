@@ -7,11 +7,10 @@ class UserSignUp  implements UseCase<String , UserSignUpParams> {
   const UserSignUp(this.authRepository);
   @override
   Future<Either<Failure, String>> call(UserSignUpParams params) async {
-    return await authRepository.signUpwithEmailPassword(
+    return  await   authRepository.signUpwithEmailPassword(
       name: params.name,
      email: params.email,
       password: params.password);
-    throw UnimplementedError();
   }
 }
 class  UserSignUpParams{
@@ -24,4 +23,3 @@ class  UserSignUpParams{
         required this.name,
       });
     }
-  
