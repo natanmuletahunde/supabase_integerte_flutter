@@ -11,30 +11,29 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'features/auth/data/datasources/auth_remote_data_source.dart';
 
 void main() async {
- // ignore: unused_local_variable
- WidgetsFlutterBinding.ensureInitialized();
- final supabase= await Supabase.initialize(url:AppSecrets.supabaseurl,  anonKey:AppSecrets.supabaseAnnonKey);
+  // ignore: unused_local_variable
+  WidgetsFlutterBinding.ensureInitialized();
+  final supabase = await Supabase.initialize(
+      url: AppSecrets.supabaseurl, anonKey: AppSecrets.supabaseAnnonKey);
   runApp(MultiBlocProvider(
     providers: [
       BlocProvider(
-  create: (_) => AuthBloc(
-    userSignUp:  UserSignUp(
-      AuthRepositoryImpl(
-        AuthRemoteDataSource(supabase.client),
-        remoteDataSource: null,
-      ),
-    ),
-  ),
-)
-
+        create: (_) => AuthBloc(
+          userSignUp: UserSignUp(
+            AuthRepositoryImpl(
+              remoteDataSource:  AuthRemoteDataSource(supabase.client),
+            ),
+          ),
+        ),
+      )
     ],
     child: const MyApp(),
   ));
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -45,4 +44,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
